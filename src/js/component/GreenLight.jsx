@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const GreenLight = () => {
-	const [selectedColor, setSelectedColor] = useState(" ");
+const GreenLight = ({ selectedColor, setSelectedColor }) => {
 	return (
 		<div
-			onClick={() => setSelectedColor("green")}
+			onClick={() => {
+				setSelectedColor("green");
+			}}
 			className={
 				"greenLight" + (selectedColor === "green" ? " glow" : "")
 			}>
@@ -13,7 +14,6 @@ const GreenLight = () => {
 		</div>
 	);
 };
-
 GreenLight.propTypes = {
 	setSelectedColor: PropTypes.func,
 	selectedColor: PropTypes.string
