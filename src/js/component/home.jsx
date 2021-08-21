@@ -3,10 +3,9 @@ import GreenLight from "./GreenLight.jsx";
 import RedLight from "./RedLight.jsx";
 import YellowLight from "./YellowLight.jsx";
 
-// onClick={() => setColor("yellow")}
-
 const Home = () => {
 	const [selectedColor, setSelectedColor] = useState("red");
+	const [selectedIcon, setSelectedIcon] = useState("far fa-hand-paper");
 	return (
 		<div className="container">
 			<div className="LightTop"></div>
@@ -14,14 +13,20 @@ const Home = () => {
 				<RedLight
 					selectedColor={selectedColor}
 					setSelectedColor={setSelectedColor}
+					selectedIcon={selectedIcon}
+					setSelectedIcon={setSelectedIcon}
 				/>
 				<YellowLight
 					selectedColor={selectedColor}
 					setSelectedColor={setSelectedColor}
+					selectedIcon={selectedIcon}
+					setSelectedIcon={setSelectedIcon}
 				/>
 				<GreenLight
 					selectedColor={selectedColor}
 					setSelectedColor={setSelectedColor}
+					selectedIcon={selectedIcon}
+					setSelectedIcon={setSelectedIcon}
 				/>
 			</div>
 		</div>

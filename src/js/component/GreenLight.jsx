@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const GreenLight = ({ selectedColor, setSelectedColor }) => {
+const GreenLight = ({
+	selectedColor,
+	setSelectedColor,
+	selectedIcon,
+	setSelectedIcon
+}) => {
 	return (
 		<div
 			onClick={() => {
@@ -10,12 +15,23 @@ const GreenLight = ({ selectedColor, setSelectedColor }) => {
 			className={
 				"greenLight" + (selectedColor === "green" ? " glow" : "")
 			}>
-			<i className="far fa-thumbs-up"></i>
+			<i
+				onClick={() => {
+					setSelectedIcon("far fa-thumbs-up");
+				}}
+				className={
+					//"far fa-thumbs-up" +
+					selectedIcon === "far fa-thumbs-up"
+						? "far fa-thumbs-up"
+						: " "
+				}></i>
 		</div>
 	);
 };
 GreenLight.propTypes = {
 	setSelectedColor: PropTypes.func,
-	selectedColor: PropTypes.string
+	selectedColor: PropTypes.string,
+	selectedIcon: PropTypes.string,
+	setSelectedIcon: PropTypes.func
 };
 export default GreenLight;
