@@ -11,14 +11,11 @@ const RedLight = ({
 		<div
 			onClick={() => {
 				setSelectedColor("red");
+				setSelectedIcon("far fa-hand-paper");
 			}}
 			className={"redLight" + (selectedColor === "red" ? " glow" : "")}>
 			<i
-				onClick={() => {
-					setSelectedIcon("far fa-hand-paper");
-				}}
 				className={
-					//"far fa-hand-paper" +
 					selectedIcon === "far fa-hand-paper"
 						? "far fa-hand-paper"
 						: ""

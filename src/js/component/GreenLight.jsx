@@ -11,16 +11,13 @@ const GreenLight = ({
 		<div
 			onClick={() => {
 				setSelectedColor("green");
+				setSelectedIcon("far fa-thumbs-up");
 			}}
 			className={
 				"greenLight" + (selectedColor === "green" ? " glow" : "")
 			}>
 			<i
-				onClick={() => {
-					setSelectedIcon("far fa-thumbs-up");
-				}}
 				className={
-					//"far fa-thumbs-up" +
 					selectedIcon === "far fa-thumbs-up"
 						? "far fa-thumbs-up"
 						: " "
